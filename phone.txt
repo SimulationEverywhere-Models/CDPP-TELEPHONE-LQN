@@ -1,0 +1,32 @@
+This zip file contains the telephone set atomic model for a plain old
+telephone system (POTS).  The telephone set files are as follows:
+
+potsdefs.h - definitions used by POTS 
+telephone.h - header file for the telephone atomic model
+telephone.cpp - implementation file for the telephone atomic model
+
+phone.bat - batch file to run the telephone set tests
+phone.ma - model definition file for testing the telephone set
+phone.ev - event file for testing the telephone set, tests are:
+           - pick up, hang up
+           - pick up, dial tone, hang up
+           - pick up, dial tone, dial number, hear ringing tone, hang up
+           - pick up, dial tone, dial number, hear ringing tone,
+             connected, hang up
+           - pick up, dial tone, dial number, hear ringing tone, connected,
+             disconnected, hang up
+           - pick up, dial tone, dial number, busy tone, hang up
+           - pick up, dial tone, dial number, wrong number tone, hang up
+           - pick up, dial tone, spurious ring signal (should get ignored),
+             spurious pick up signal (should get ignored), dial number,
+             spurious dial number (should get ignored), hear ringing tone,
+             spurious busy signal (should get ignored), spurious wrong number
+             tone (should get ignored), hang up
+           - phone ring, pick up, connected, hang up
+           - phone ring, pick up, connected, disconnected, hang up
+           - combinaton of spurios signals mixed with meaningful signals
+phone.log - log file from running the telephone set tests
+phone.txt - explanation file (this file)
+
+makefile - modified to compile the telephone set code
+register.cpp - modified to register the Telephone atomic model
